@@ -1,0 +1,3 @@
+/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/CMakeFiles/edit_cache.dir
+/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/CMakeFiles/calib_local.dir

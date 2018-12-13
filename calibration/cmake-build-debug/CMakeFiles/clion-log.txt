@@ -1,0 +1,8 @@
+/opt/clion-2018.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /media/jintain/sg/weapons/cc/cvtool/calibration
+CMake Error at CMakeLists.txt:18 (message):
+  Thor lib not found, you can clone from https://github.com/jinfagang/Thor to
+  build and install.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/CMakeFiles/CMakeOutput.log".

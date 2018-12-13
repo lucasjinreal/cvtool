@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/calib_local.dir/calib_local.cc.o  -o calib_local -Wl,-rpath,/usr/local/lib /usr/local/lib/libthor.so 
