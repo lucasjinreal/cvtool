@@ -15,21 +15,25 @@ using namespace thor;
 void show_usage() {
     cout << "calibration local tool, version 0.1, by Lucas Jin.\n"
         << "\nUsage:\n"
-        << "calib_local 8x4 /dir/to/images\n" << colors::reset;
+        << "1: chessboard size\n2: every square size\n3: path to images.\n"
+        << "calib_local 8x4 0.05 /dir/to/images\n" << colors::reset;
 }
 
 int main(int argc, char* argv[]) {
     
     // parse board size from argument
-    if (argc < 3) {
+    if (argc < 4) {
         show_usage();
     } else {
         string size_s = string(argv[1]);
+        // cout << size_s.substr(0, size_s.find("x")) << endl;
+        // cout << size_s.substr(size_s.find("x")+1) << endl;
+        double square_w = stod(argv[2]);
         int board_w = stoi(size_s.substr(0, size_s.find("x")));
-        int board_h = stoi(size_s.substr(size_s.find("x")));
+        int board_h = stoi(size_s.substr(size_s.find("x")+1));
         Size board_size = Size(board_w, board_h);
 
-        string image_dir = string(argv[2]);
+        string image_dir = string(argv[3]);
         // contains all to calib image path
         ofstream fout("calib_result.txt");
 
@@ -87,20 +91,14 @@ int main(int argc, char* argv[]) {
                 int k = i+1;
                 cout << "--> corners of " << k << " image: " << endl;
             }
-
-            if (0 == j%3) {cout << endl;} else {
-                cout.width(10);
-            }
-
-            cout << " -->" << img_points_all[j][0].x;
-            cout << " -->" << img_points_all[j][0].y;
+            cout << "       " << img_points_all[j][0].x << " " << img_points_all[j][0].y << endl;
         }
 
-        cout << "corners extraction finished.\n";
+        cout << "\ncorners extraction finished.\n";
 
         cout << "---------------------- start to calibration -------------------------\n";
         // TODO: this should change to dynamic, now it hard code into fix size
-        Size square_size = Size(10, 10);
+        Size square_size = Size(square_w, square_w);
         // board 3d coordinate
         vector<vector<Point3f>> object_points;
 

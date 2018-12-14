@@ -79,7 +79,24 @@ calib_local_EXTERNAL_OBJECTS =
 
 calib_local: CMakeFiles/calib_local.dir/calib_local.cc.o
 calib_local: CMakeFiles/calib_local.dir/build.make
-calib_local: /usr/local/lib/libthor.so
+calib_local: /usr/local/lib/libopencv_dnn.so.3.4.3
+calib_local: /usr/local/lib/libopencv_ml.so.3.4.3
+calib_local: /usr/local/lib/libopencv_objdetect.so.3.4.3
+calib_local: /usr/local/lib/libopencv_shape.so.3.4.3
+calib_local: /usr/local/lib/libopencv_stitching.so.3.4.3
+calib_local: /usr/local/lib/libopencv_superres.so.3.4.3
+calib_local: /usr/local/lib/libopencv_videostab.so.3.4.3
+calib_local: /usr/local/lib/libopencv_viz.so.3.4.3
+calib_local: /usr/local/lib/libopencv_calib3d.so.3.4.3
+calib_local: /usr/local/lib/libopencv_features2d.so.3.4.3
+calib_local: /usr/local/lib/libopencv_flann.so.3.4.3
+calib_local: /usr/local/lib/libopencv_highgui.so.3.4.3
+calib_local: /usr/local/lib/libopencv_photo.so.3.4.3
+calib_local: /usr/local/lib/libopencv_video.so.3.4.3
+calib_local: /usr/local/lib/libopencv_videoio.so.3.4.3
+calib_local: /usr/local/lib/libopencv_imgcodecs.so.3.4.3
+calib_local: /usr/local/lib/libopencv_imgproc.so.3.4.3
+calib_local: /usr/local/lib/libopencv_core.so.3.4.3
 calib_local: CMakeFiles/calib_local.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable calib_local"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/calib_local.dir/link.txt --verbose=$(VERBOSE)

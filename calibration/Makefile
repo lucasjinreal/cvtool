@@ -9,6 +9,9 @@ LIBS = $(OPENCV) $(THOR)
 calib_local:
 	$(CC) $(CFLAGS) -o calib_local calib_local.cc $(LIBS)
 
+calib_local2:
+	$(CC) $(CFLAGS) -o calib_local2 calib_local2.cc $(LIBS)
+
 calib_online:
 	$(CC) $(CFLAGS) -o calib_online calib_online.cc $(LIBS)
 
