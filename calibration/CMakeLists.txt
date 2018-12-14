@@ -21,3 +21,6 @@ target_link_libraries(calib_local ${OpenCV_LIBS} thor)
 
 add_executable(calib_online calib_online.cc)
 target_link_libraries(calib_online ${OpenCV_LIBS} thor)
+
+add_executable(calib_online_realsense calib_online_realsense.cc)
+target_link_libraries(calib_online_realsense ${OpenCV_LIBS} thor realsense2)

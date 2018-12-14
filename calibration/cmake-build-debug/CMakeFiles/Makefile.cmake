@@ -52,6 +52,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/calib_online.dir/DependInfo.cmake"
   "CMakeFiles/calib_local.dir/DependInfo.cmake"
+  "CMakeFiles/calib_online.dir/DependInfo.cmake"
+  "CMakeFiles/calib_online_realsense.dir/DependInfo.cmake"
   )

@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named calib_local
+
+# Build rule for target.
+calib_local: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 calib_local
+.PHONY : calib_local
+
+# fast build rule for target.
+calib_local/fast:
+	$(MAKE) -f CMakeFiles/calib_local.dir/build.make CMakeFiles/calib_local.dir/build
+.PHONY : calib_local/fast
+
+#=============================================================================
 # Target rules for targets named calib_online
 
 # Build rule for target.
@@ -124,17 +137,17 @@ calib_online/fast:
 .PHONY : calib_online/fast
 
 #=============================================================================
-# Target rules for targets named calib_local
+# Target rules for targets named calib_online_realsense
 
 # Build rule for target.
-calib_local: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 calib_local
-.PHONY : calib_local
+calib_online_realsense: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 calib_online_realsense
+.PHONY : calib_online_realsense
 
 # fast build rule for target.
-calib_local/fast:
-	$(MAKE) -f CMakeFiles/calib_local.dir/build.make CMakeFiles/calib_local.dir/build
-.PHONY : calib_local/fast
+calib_online_realsense/fast:
+	$(MAKE) -f CMakeFiles/calib_online_realsense.dir/build.make CMakeFiles/calib_online_realsense.dir/build
+.PHONY : calib_online_realsense/fast
 
 calib_local.o: calib_local.cc.o
 
@@ -190,6 +203,33 @@ calib_online.cc.s:
 	$(MAKE) -f CMakeFiles/calib_online.dir/build.make CMakeFiles/calib_online.dir/calib_online.cc.s
 .PHONY : calib_online.cc.s
 
+calib_online_realsense.o: calib_online_realsense.cc.o
+
+.PHONY : calib_online_realsense.o
+
+# target to build an object file
+calib_online_realsense.cc.o:
+	$(MAKE) -f CMakeFiles/calib_online_realsense.dir/build.make CMakeFiles/calib_online_realsense.dir/calib_online_realsense.cc.o
+.PHONY : calib_online_realsense.cc.o
+
+calib_online_realsense.i: calib_online_realsense.cc.i
+
+.PHONY : calib_online_realsense.i
+
+# target to preprocess a source file
+calib_online_realsense.cc.i:
+	$(MAKE) -f CMakeFiles/calib_online_realsense.dir/build.make CMakeFiles/calib_online_realsense.dir/calib_online_realsense.cc.i
+.PHONY : calib_online_realsense.cc.i
+
+calib_online_realsense.s: calib_online_realsense.cc.s
+
+.PHONY : calib_online_realsense.s
+
+# target to generate assembly for a file
+calib_online_realsense.cc.s:
+	$(MAKE) -f CMakeFiles/calib_online_realsense.dir/build.make CMakeFiles/calib_online_realsense.dir/calib_online_realsense.cc.s
+.PHONY : calib_online_realsense.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -197,15 +237,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... calib_online"
 	@echo "... calib_local"
+	@echo "... calib_online"
+	@echo "... calib_online_realsense"
+	@echo "... edit_cache"
 	@echo "... calib_local.o"
 	@echo "... calib_local.i"
 	@echo "... calib_local.s"
 	@echo "... calib_online.o"
 	@echo "... calib_online.i"
 	@echo "... calib_online.s"
+	@echo "... calib_online_realsense.o"
+	@echo "... calib_online_realsense.i"
+	@echo "... calib_online_realsense.s"
 .PHONY : help
 
 

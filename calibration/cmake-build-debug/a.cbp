@@ -27,11 +27,57 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
+			<Target title="calib_local">
+				<Option output="/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/calib_local" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug"/>
-				<Option type="4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="."/>
+					<Add directory="/usr/local/lib/python3.6/dist-packages/tensorflow/include/external/local_config_cuda/cuda/cuda/"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 calib_local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="calib_local/fast">
+				<Option output="/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/calib_local" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="."/>
+					<Add directory="/usr/local/lib/python3.6/dist-packages/tensorflow/include/external/local_config_cuda/cuda/cuda/"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 calib_local/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -93,8 +139,8 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="calib_local">
-				<Option output="/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/calib_local" prefix_auto="0" extension_auto="0"/>
+			<Target title="calib_online_realsense">
+				<Option output="/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/calib_online_realsense" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -115,14 +161,14 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 calib_local"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 calib_online_realsense"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="calib_local/fast">
-				<Option output="/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/calib_local" prefix_auto="0" extension_auto="0"/>
+			<Target title="calib_online_realsense/fast">
+				<Option output="/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/calib_online_realsense" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -143,7 +189,17 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 calib_local/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 calib_online_realsense/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/media/jintain/sg/weapons/cc/cvtool/calibration/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -155,6 +211,9 @@
 		</Unit>
 		<Unit filename="/media/jintain/sg/weapons/cc/cvtool/calibration/calib_online.cc">
 			<Option target="calib_online"/>
+		</Unit>
+		<Unit filename="/media/jintain/sg/weapons/cc/cvtool/calibration/calib_online_realsense.cc">
+			<Option target="calib_online_realsense"/>
 		</Unit>
 		<Unit filename="/media/jintain/sg/weapons/cc/cvtool/calibration/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
